@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sesi 16 WDP</title>
+	<link rel="stylesheet" href="http://github.com/jquery/qunit/raw/master/qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://github.com/jquery/qunit/raw/master/qunit/qunit.js"></script>
+	<!-- Your project file goes here -->
+	<script type="text/javascript" src="myProject.js"></script>
+	<!-- Your tests file goes here -->
+	<script type="text/javascript" src="myTests.js"></script>
+</head>
+<body>
+    <div id="tampil"></div>
+
+	<!-- <h1 id="qunit-header">Sesi 16 WDP</h1> -->
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+
+    <script>
+        if(typeof(Storage) !== "undefined") {
+            localStorage.setItem("key", "Ilham")
+            document.getElementById("tampil").innerHTML = localStorage.getItem("key")
+        } else {
+            document.getElementById("tampil").innerHTML = "Sorry sir"
+        }
+    </script>
+</body>
+</html>
